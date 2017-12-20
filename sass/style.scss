@@ -33,7 +33,7 @@ body {
   background: #93c47d;
   width: 100%;
   font-family: "vaud-display", sans-serif;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 img {
@@ -59,7 +59,6 @@ li {
   align-items: center;
   justify-content: space-around;
 }
-
 .hero {
   text-align: center;
   margin-top: 2em;
@@ -73,11 +72,9 @@ li {
     font-size: 1.3em;
   }
 }
-
 .description {
   animation-delay: 0.7s;
 }
-
 .photo {
   text-align: center;
   img {
@@ -86,7 +83,6 @@ li {
     border: 5px solid white;
   }
 }
-
 .social {
   text-align: center;
   padding-bottom: 2em;
@@ -98,33 +94,25 @@ li {
     }
   }
 }
-
 .fa-github {
   animation-delay: 1.2s;
 }
-
 .fa-codepen {
   animation-delay: 1.3s;
 }
-
-.fa-medium {
+.fa-medium-m {
   animation-delay: 1.4s;
 }
-
 .fa-twitter {
   animation-delay: 1.5s;
 }
-
-.fa-linkedin {
+.fa-linkedin-in {
   animation-delay: 1.6s;
 }
-
 .fa-envelope {
   animation-delay: 1.7s;
 }
-
 // MEDIA QUERIES
-
 @media (min-width: 600px) {
   .container {
     height: 100vh;
@@ -137,7 +125,6 @@ li {
       font-size: 1.5em;
     }
   }
-
   .social {
     li {
       font-size: 2em;
@@ -151,7 +138,6 @@ li {
     }
   }
 }
-
 @media (max-width: 670px) and (orientation: landscape) {
   .hero {
     h1 {
@@ -162,13 +148,11 @@ li {
       font-size: 1em;
     }
   }
-
   .photo {
     img {
       width: 20%;
     }
   }
-
   .social {
     li {
       font-size: 1em;
