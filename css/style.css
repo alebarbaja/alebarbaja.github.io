@@ -30,7 +30,6 @@ body {
   background: #93c47d;
   width: 100%;
   font-family: "vaud-display", sans-serif;
-  overflow: hidden;
 }
 
 img {
@@ -115,7 +114,7 @@ li {
           animation-delay: 1.3s;
 }
 
-.fa-medium {
+.fa-medium-m {
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
 }
@@ -125,7 +124,7 @@ li {
           animation-delay: 1.5s;
 }
 
-.fa-linkedin {
+.fa-linkedin-in {
   -webkit-animation-delay: 1.6s;
           animation-delay: 1.6s;
 }
