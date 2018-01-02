@@ -42,7 +42,7 @@ li {
 }
 
 .container {
-  height: 90vh;
+  height: 95vh;
   background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, white), color-stop(50%, #93c47d), to(#93c47d));
   background: linear-gradient(to bottom, white 0%, white 50%, #93c47d 50%, #93c47d 100%);
   display: -webkit-box;
@@ -61,7 +61,6 @@ li {
 
 .hero {
   text-align: center;
-  margin-top: 2em;
 }
 
 .hero h1 {
@@ -137,6 +136,9 @@ li {
 @media (min-width: 600px) {
   .container {
     height: 100vh;
+  }
+  .hero {
+    margin-top: 2em;
   }
   .hero h1 {
     font-size: 3em;
