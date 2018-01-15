@@ -128,9 +128,14 @@ li {
           animation-delay: 1.6s;
 }
 
-.fa-envelope {
+.fa-wordpress {
   -webkit-animation-delay: 1.7s;
           animation-delay: 1.7s;
+}
+
+.fa-envelope {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 @media (min-width: 600px) {
