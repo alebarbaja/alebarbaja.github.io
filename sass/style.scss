@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-:focus {
+:focus:not(#game) {
   padding: 10px;
   border: 2px dotted black;
 }
@@ -128,6 +128,7 @@ li {
     #93c47d 100%
   );
   h3 {
+    font-weight: 400;
     font-size: 1em;
     margin: 4em auto 0;
     width: 80%;
@@ -143,6 +144,11 @@ li {
 @media (min-width: 600px) {
   .container {
     height: 100vh;
+  }
+  .container-reverse {
+    h3 {
+      font-size: 1.5em;
+    }
   }
   .hero {
     margin-top: 2em;
