@@ -86,7 +86,7 @@ li {
   text-align: center;
   padding-bottom: 2em;
   li {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0.3em;
     a {
       color: inherit;
@@ -114,6 +114,31 @@ li {
 .fa-envelope {
   animation-delay: 1.8s;
 }
+.fa-gamepad {
+  animation-duration: 1.5s;
+  animation-delay: 1.9s;
+}
+
+.container-reverse {
+  background: linear-gradient(
+    to top,
+    white 0%,
+    white 50%,
+    #93c47d 50%,
+    #93c47d 100%
+  );
+  h3 {
+    font-size: 1em;
+    margin: 4em auto 0;
+    width: 80%;
+    text-align: center;
+  }
+  iframe {
+    width: 100%;
+    height: 85vh;
+  }
+}
+
 // MEDIA QUERIES
 @media (min-width: 600px) {
   .container {
@@ -134,9 +159,12 @@ li {
       padding: 1em;
       transform-origin: center center;
       transition: all 0.3s ease-in-out;
-      &:hover {
+      &:hover:not(:last-child) {
         transform: scale(1.3);
         color: white;
+      }
+      &:hover:last-child {
+        animation: 1s bounce;
       }
     }
   }
