@@ -15,6 +15,7 @@
   src: url("/fonts/VaudDisplay-Book.eot?#iefix") format("embedded-opentype"),
     url("/fonts/VaudDisplay-Book.woff") format("woff"),
     url("/fonts/VaudDisplay-Book.ttf") format("truetype");
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
 }
@@ -25,6 +26,7 @@
   src: url("/fonts/VaudDisplay-Medium.eot?#iefix") format("embedded-opentype"),
     url("/fonts/VaudDisplay-Medium.woff") format("woff"),
     url("/fonts/VaudDisplay-Medium.ttf") format("truetype");
+  font-display: swap;
   font-style: normal;
   font-weight: 500;
 }
