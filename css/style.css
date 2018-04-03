@@ -97,7 +97,7 @@ li {
 }
 
 .social li {
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 0.3em;
 }
 
@@ -140,30 +140,6 @@ li {
           animation-delay: 1.8s;
 }
 
-.fa-gamepad {
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-delay: 1.9s;
-          animation-delay: 1.9s;
-}
-
-.container-reverse {
-  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, white), color-stop(50%, #93c47d), to(#93c47d));
-  background: linear-gradient(to top, white 0%, white 50%, #93c47d 50%, #93c47d 100%);
-}
-
-.container-reverse h3 {
-  font-size: 1em;
-  margin: 4em auto 0;
-  width: 80%;
-  text-align: center;
-}
-
-.container-reverse iframe {
-  width: 100%;
-  height: 85vh;
-}
-
 @media (min-width: 600px) {
   .container {
     height: 100vh;
@@ -185,14 +161,10 @@ li {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  .social li:hover:not(:last-child) {
+  .social li:hover {
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
     color: white;
-  }
-  .social li:hover:last-child {
-    -webkit-animation: 1s bounce;
-            animation: 1s bounce;
   }
 }
 
