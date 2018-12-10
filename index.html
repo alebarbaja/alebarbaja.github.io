@@ -1,124 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Alejandro Narvaja - Desarrollo web</title>
 
     <!--
-			¡Gracias por mirar!
-            Mientras lo hacés te recomiendo escuchar este pedazo de canción de Pink Floyd: https://www.youtube.com/watch?v=P_4uEaZQ2Kg
-            
-            Thanks for watching!
-            While doing so I recommend you listen to this great Pink Floyd song: https://www.youtube.com/watch?v=P_4uEaZQ2Kg
+      ¡Gracias por mirar!
+               Mientras lo hacés te recomiendo escuchar este pedazo de canción de Pink Floyd: https://www.youtube.com/watch?v=P_4uEaZQ2Kg
+
+               Thanks for watching!
+               While doing so I recommend you listen to this great Pink Floyd song: https://www.youtube.com/watch?v=P_4uEaZQ2Kg
     -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Desarrollo de sitios web desde Alicante">
-    <meta name="author" content="Alejandro Narvaja <anarvaja@gmail.com> http://alejandronarvaja.com">
-    <meta name="keywords" content="narvaja,alejandronarvaja,frontend,alicante,css">
-    <meta name="google-site-verification" content="3It63jwUuVzE9bNYn0pfExK8VArTdaoYif29exhgA5M" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Desarrollo de sitios web desde Alicante"
+    />
+    <meta
+      name="author"
+      content="Alejandro Narvaja <anarvaja@gmail.com> http://alejandronarvaja.com"
+    />
+    <meta
+      name="keywords"
+      content="narvaja,alejandronarvaja,frontend,alicante,css"
+    />
+    <meta
+      name="google-site-verification"
+      content="3It63jwUuVzE9bNYn0pfExK8VArTdaoYif29exhgA5M"
+    />
 
-    <!-- Favicons -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff"> -->
-    <!-- ./Favicons -->
+    <link rel="icon" data-emoji="🔥" type="image/png" />
 
-    <link rel="icon" data-emoji="🔥" type="image/png">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      media="screen"
+    />
+    <link rel="dns-prefetch" href="//use.fontawesome.com" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.2/css/all.css"
+      rel="stylesheet"
+      media="screen"
+    />
 
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" media="screen">
-    <link rel="dns-prefetch" href="//use.fontawesome.com">
-    <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/style.css" />
 
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111363171-1"></script>
+    <link
+      rel="preconnect dns-prefetch"
+      href="https://www.google-analytics.com"
+    />
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-111363171-1');
+      window.ga =
+        window.ga ||
+        function() {
+          (ga.q = ga.q || []).push(arguments);
+        };
+      ga.l = +new Date();
+      ga("create", "UA-111363171-1", "auto");
+      ga("send", "pageview");
     </script>
-</head>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
+      <section class="hero">
+        <article class="name animated fadeInDown">
+          <h1>Alejandro Narvaja</h1>
+        </article>
+        <article class="description animated fadeIn">
+          <h2>Front-end web developer</h2>
+        </article>
+      </section>
+      <!-- ./hero -->
 
-        <section class="hero">
-            <article class="name animated fadeInDown">
-                <h1>Alejandro Narvaja</h1>
-            </article>
-            <article class="description animated fadeIn">
-                <h2>Front-end web developer</h2>
-            </article>
-        </section>
-        <!-- ./hero -->
+      <section class="photo">
+        <picture>
+          <source srcset="img/alejandroNarvaja.webp" type="image/webp" />
+          <source srcset="img/alejandroNarvaja.png" type="image/jpeg" />
+          <img src="img/alejandroNarvaja.png" alt="Alejandro Narvaja" />
+        </picture>
+      </section>
+      <!-- ./photo -->
 
-        <section class="photo">
-            <picture>
-                <source srcset="img/alejandroNarvaja.webp" type="image/webp">
-                <source srcset="img/alejandroNarvaja.png" type="image/jpeg">
-                <img src="img/alejandroNarvaja.png" alt="Alejandro Narvaja">
-            </picture>
-        </section>
-        <!-- ./photo -->
-
-        <section class="social" aria-label="redes sociales">
-            <ul>
-                <li>
-                    <a aria-label="github" href="https://github.com/alebarbaja" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github animated fadeInUp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a aria-label="codepen" href="https://codepen.io/alejuss" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-codepen animated fadeInUp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a aria-label="medium" href="https://medium.com/@alebarbaja" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-medium-m animated fadeInUp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a aria-label="twitter" href="https://twitter.com/alebarbaja" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-twitter animated fadeInUp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a aria-label="linkedin" href="https://linkedin.com/in/alejandronarvaja" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in animated fadeInUp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a aria-label="wordpress" href="https://profiles.wordpress.org/anarvaja" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-wordpress animated fadeInUp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a aria-label="email" href="mailto:anarvaja@gmail.com">
-                        <i class="fas fa-envelope animated fadeInUp"></i>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <!-- ./social -->
-
+      <section class="social" aria-label="redes sociales">
+        <ul>
+          <li>
+            <a
+              aria-label="github"
+              href="https://github.com/alebarbaja"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github animated fadeInUp"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="codepen"
+              href="https://codepen.io/alejuss"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-codepen animated fadeInUp"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="medium"
+              href="https://medium.com/@alebarbaja"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-medium-m animated fadeInUp"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="twitter"
+              href="https://twitter.com/alebarbaja"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter animated fadeInUp"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="linkedin"
+              href="https://linkedin.com/in/alejandronarvaja"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin-in animated fadeInUp"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="wordpress"
+              href="https://profiles.wordpress.org/anarvaja"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-wordpress animated fadeInUp"></i>
+            </a>
+          </li>
+          <li>
+            <a aria-label="email" href="mailto:anarvaja@gmail.com">
+              <i class="fas fa-envelope animated fadeInUp"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- ./social -->
     </div>
     <!-- ./container -->
 
     <script src="js/favicon-emoji.js"></script>
-
-</body>
-
+  </body>
 </html>
