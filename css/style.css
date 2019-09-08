@@ -1,0 +1,231 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --bg-color: hsl(40, 18.7%, 93.7%);
+    --color: hsl(0, 0.7%, 28.0%);
+
+    background-color: var(--bg-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color);
+    
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+h1,
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    color: hsl(37, 61.4%, 35.7%);
+}
+
+h2 {
+    color: hsl(226, 39.3%, 43.9%);
+}
+
+img {
+    display: block;
+    grid-column: 1 / 7;
+    justify-self: center;
+
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 25vh;
+
+    margin: 30px auto;
+    padding: 2px;
+
+    background-color: white;
+    box-shadow: 0 0 10px -9px black;
+
+    transition: max-width .1s ease-out;
+}
+
+figcaption {
+    grid-column: 6 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    display: inline-block;
+    padding: .45em;
+    background-color: hsl(226, 39.3%, 43.9%);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    h1,
+    h2,
+    figure,
+    img,
+    figcaption {
+        grid-row: 1;
+    }
+
+    h1, h2 {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        grid-column: 1;
+    }
+
+    h2 {
+        grid-column: 2;
+        justify-self: flex-start;
+    }
+
+    figure {
+        grid-column: 3 / -1;
+        
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        align-items: center;
+    }
+
+    img {
+        max-width: 30vw;
+    }
+
+    figcaption {
+        flex-direction: column;
+        align-items: flex-start;
+
+        justify-content: space-around;
+    }
+
+    a {
+        margin-bottom: 15px;
+    }
+    
+    a:hover,
+    a:active,
+    a:focus {
+        background-color: white;
+        color: hsl(226, 39.3%, 43.9%);
+    }
+    
+    a:nth-of-type(1) {
+        transform: rotate(-15deg);
+        margin-left: 20px;
+    
+        transition: transform .12s ease-out;
+    }
+    
+    a:nth-of-type(1):hover {
+        transform: rotate(0deg);
+    }
+    
+    a:nth-of-type(2) {
+        transform: rotate(-10deg);
+        margin-left: 40px;
+    
+        transition: transform .12s ease-out;
+    }
+    
+    a:nth-of-type(2):hover {
+        transform: rotate(0deg);
+    }
+    
+    a:nth-of-type(3) {
+        transform: rotate(-5deg);
+        margin-left: 60px;
+    
+        transition: transform .12s ease-out;
+    }
+    
+    a:nth-of-type(3):hover {
+        transform: rotate(0deg);
+    }
+    
+    a:nth-of-type(4) {
+        transform: rotate(5deg);
+        margin-left: 60px;
+    
+        transition: transform .12s ease-out;
+    }
+    
+    a:nth-of-type(4):hover {
+        transform: rotate(0deg);
+    }
+    
+    a:nth-of-type(5) {
+        transform: rotate(10deg);
+        margin-left: 40px;
+    
+        transition: transform .12s ease-out;
+    }
+    
+    a:nth-of-type(5):hover {
+        transform: rotate(0deg);
+    }
+    
+    a:nth-of-type(6) {
+        transform: rotate(15deg);
+        margin-left: 20px;
+    
+        transition: transform .12s ease-out;
+    }
+
+    a:nth-of-type(6):hover {
+        transform: rotate(0deg);
+    }
+}
+
+@media (min-width: 992px) {
+    img {
+        max-width: 15vw;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    a:nth-of-type(1),
+    a:nth-of-type(2),
+    a:nth-of-type(3),
+    a:nth-of-type(4),
+    a:nth-of-type(5),
+    a:nth-of-type(6) {
+        transition: none;
+    }
+
+    img {
+        transition: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--color);
+        color: var(--bg-color);
+    }
+
+    h1 {
+        --bg-color: hsl(40, 18.7%, 73.7%);
+        color: var(--bg-color);
+    }
+    
+    h2 {
+        --bg-color: hsl(40, 18.7%, 83.7%);
+        color: var(--bg-color);
+    }
+}
