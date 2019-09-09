@@ -20,9 +20,17 @@ body {
 }
 
 main {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
+    align-items: center; */
+}
+
+@supports (display: grid) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
 }
 
 h1,
@@ -85,9 +93,14 @@ a {
     }
 
     h1, h2 {
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
         grid-column: 1;
+    }
+
+    @supports (writing-mode: vertical-lr) {
+        h1, h2 {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
     }
 
     h2 {
@@ -97,10 +110,14 @@ a {
 
     figure {
         grid-column: 3 / -1;
-        
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        align-items: center;
+    }
+
+    @supports (display: grid) {
+        figure {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            align-items: center;
+        }
     }
 
     img {
@@ -108,10 +125,16 @@ a {
     }
 
     figcaption {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
 
         justify-content: space-around;
+    }
+
+    @supports (display: grid) {
+        figcaption {
+            flex-direction: column;
+        }
     }
 
     a {
@@ -127,9 +150,15 @@ a {
     
     a:nth-of-type(1) {
         transform: rotate(-15deg);
-        margin-left: 20px;
+        margin-left: 10px;
     
         transition: transform .12s ease-out;
+    }
+
+    @supports (display: grid) {
+        a:nth-of-type(1) {
+            margin-left: 20px;
+        }
     }
     
     a:nth-of-type(1):hover {
@@ -138,9 +167,15 @@ a {
     
     a:nth-of-type(2) {
         transform: rotate(-10deg);
-        margin-left: 40px;
+        margin-left: 10px;
     
         transition: transform .12s ease-out;
+    }
+
+    @supports (display: grid) {
+        a:nth-of-type(2) {
+            margin-left: 40px;
+        }
     }
     
     a:nth-of-type(2):hover {
@@ -149,9 +184,15 @@ a {
     
     a:nth-of-type(3) {
         transform: rotate(-5deg);
-        margin-left: 60px;
+        margin-left: 10px;
     
         transition: transform .12s ease-out;
+    }
+
+    @supports (display: grid) {
+        a:nth-of-type(3) {
+            margin-left: 60px;
+        }
     }
     
     a:nth-of-type(3):hover {
@@ -160,9 +201,15 @@ a {
     
     a:nth-of-type(4) {
         transform: rotate(5deg);
-        margin-left: 60px;
+        margin-left: 10px;
     
         transition: transform .12s ease-out;
+    }
+
+    @supports (display: grid) {
+        a:nth-of-type(4) {
+            margin-left: 60px;
+        }
     }
     
     a:nth-of-type(4):hover {
@@ -171,9 +218,15 @@ a {
     
     a:nth-of-type(5) {
         transform: rotate(10deg);
-        margin-left: 40px;
+        margin-left: 10px;
     
         transition: transform .12s ease-out;
+    }
+
+    @supports (display: grid) {
+        a:nth-of-type(5) {
+            margin-left: 40px;
+        }
     }
     
     a:nth-of-type(5):hover {
@@ -182,9 +235,15 @@ a {
     
     a:nth-of-type(6) {
         transform: rotate(15deg);
-        margin-left: 20px;
+        margin-left: 10px;
     
         transition: transform .12s ease-out;
+    }
+
+    @supports (display: grid) {
+        a:nth-of-type(6) {
+            margin-left: 20px;
+        }
     }
 
     a:nth-of-type(6):hover {
