@@ -19,12 +19,6 @@ body {
     align-items: center;
 }
 
-main {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    align-items: center; */
-}
-
 @supports (display: grid) {
     main {
         display: grid;
