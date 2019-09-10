@@ -208,7 +208,7 @@ a {
 
     @supports (display: grid) {
         a:nth-of-type(4) {
-            margin-left: 60px;
+            margin-left: 40px;
         }
     }
     
@@ -225,30 +225,14 @@ a {
 
     @supports (display: grid) {
         a:nth-of-type(5) {
-            margin-left: 40px;
+            margin-left: 20px;
         }
     }
     
     a:nth-of-type(5):hover {
         transform: rotate(0deg);
     }
-    
-    a:nth-of-type(6) {
-        transform: rotate(15deg);
-        margin-left: 10px;
-    
-        transition: transform .12s ease-out;
-    }
 
-    @supports (display: grid) {
-        a:nth-of-type(6) {
-            margin-left: 20px;
-        }
-    }
-
-    a:nth-of-type(6):hover {
-        transform: rotate(0deg);
-    }
 }
 
 @media (min-width: 992px) {
