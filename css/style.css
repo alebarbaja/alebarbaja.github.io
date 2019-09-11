@@ -135,6 +135,10 @@ a {
         margin-bottom: 15px;
         text-decoration: none;
     }
+
+    a:last-child {
+        margin-bottom: 0;
+    }
     
     a:hover,
     a:active,
