@@ -68,7 +68,7 @@ figcaption {
 
 a {
     display: inline-block;
-    margin: 0 2px;
+    margin: 0 2px 4px;
     padding: .45em;
     background-color: hsl(226, 39.3%, 43.9%);
     color: white;
@@ -244,6 +244,12 @@ a {
         opacity: 0;
     }
 }
+
+@media (max-height: 414px) and (min-width: 500px) {
+    img {
+        max-width: 50vh;
+    } 
+}  
 
 @media screen and (prefers-reduced-motion: reduce) {
     a:nth-of-type(1),
