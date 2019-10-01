@@ -1,45 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Front-End things" />
-    <meta name="google-site-verification" content="3It63jwUuVzE9bNYn0pfExK8VArTdaoYif29exhgA5M" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Front-End things" />
+  <meta name="google-site-verification" content="3It63jwUuVzE9bNYn0pfExK8VArTdaoYif29exhgA5M" />
 
-    <title>Alejandro Narvaja - UI Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" data-emoji="🚀" type="image/png" />
+  <title>Alejandro Narvaja - UI Developer</title>
+  <link rel="icon" data-emoji="🚀" type="image/png" />
 
-    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" />
-    <script>
-      window.ga =
-        window.ga ||
-        function() {
-          (ga.q = ga.q || []).push(arguments);
-        };
-      ga.l = +new Date();
-      ga("create", "UA-111363171-1", "auto");
-      ga("send", "pageview");
-    </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" />
+  <script>
+    window.ga =
+      window.ga ||
+      function () {
+        (ga.q = ga.q || []).push(arguments);
+      };
+    ga.l = +new Date();
+    ga("create", "UA-111363171-1", "auto");
+    ga("send", "pageview");
+  </script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+  <style>
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      --bg-color: hsl(40, 18.7%, 93.7%);
+      --color: hsl(0, 0.7%, 28.0%);
+
+      background-color: var(--bg-color);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: var(--color);
+
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @supports (display: grid) {
+      main {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+      }
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: hsl(37, 61.4%, 35.7%);
+    }
+
+    h2 {
+      color: hsl(226, 39.3%, 43.9%);
+    }
+
+    img {
+      display: block;
+      grid-column: 1 / 7;
+      justify-self: center;
+
+      border-radius: 50%;
+      object-fit: cover;
+      max-width: 25vh;
+
+      margin: 30px auto;
+      padding: 2px;
+
+      background-color: white;
+      box-shadow: 0 0 10px -9px black;
+
+      transition: max-width .1s ease-out, opacity .1s ease-out;
+    }
+
+    figcaption {
+      grid-column: 6 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 2px 4px;
+      padding: .45em;
+      background-color: hsl(226, 39.3%, 43.9%);
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      h1,
+      h2,
+      figure,
+      img,
+      figcaption {
+        grid-row: 1;
+      }
+
+      h1,
+      h2 {
+        grid-column: 1;
+      }
+
+      @supports (writing-mode: vertical-lr) {
+
+        h1,
+        h2 {
+          writing-mode: vertical-lr;
+          transform: rotate(180deg);
+        }
+      }
+
+      h2 {
+        grid-column: 2;
+        justify-self: flex-start;
+      }
+
+      figure {
+        grid-column: 3 / -1;
+      }
+
+      @supports (display: grid) {
+        figure {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          align-items: center;
+        }
+      }
+
+      img {
+        max-width: 25vh;
+      }
+
+      figcaption {
+        flex-direction: row;
+        align-items: flex-start;
+
+        justify-content: space-around;
+      }
+
+      @supports (display: grid) {
+        figcaption {
+          flex-direction: column;
+        }
+      }
+
+      a {
+        margin-bottom: 15px;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      a:last-child {
+        margin-bottom: 0;
+      }
+
+      a:hover,
+      a:active,
+      a:focus {
+        background-color: white;
+        color: hsl(226, 39.3%, 43.9%);
+      }
+
+      a:nth-of-type(1) {
+        transform: rotate(-28deg);
+        margin-left: 10px;
+
+        transition: transform .12s ease-out;
+      }
+
+      @supports (display: grid) {
+        a:nth-of-type(1) {
+          margin-left: 20px;
+        }
+      }
+
+      a:nth-of-type(1):hover {
+        transform: rotate(0deg);
+      }
+
+      a:nth-of-type(2) {
+        transform: rotate(-14deg);
+        margin-left: 10px;
+
+        transition: transform .12s ease-out;
+      }
+
+      @supports (display: grid) {
+        a:nth-of-type(2) {
+          margin-left: 40px;
+        }
+      }
+
+      a:nth-of-type(2):hover {
+        transform: rotate(0deg);
+      }
+
+      a:nth-of-type(3) {
+        margin-left: 10px;
+
+        transition: transform .12s ease-out;
+      }
+
+      @supports (display: grid) {
+        a:nth-of-type(3) {
+          margin-left: 45px;
+          margin-bottom: 18px;
+        }
+      }
+
+      a:nth-of-type(3):hover {
+        transform: rotate(0deg);
+      }
+
+      a:nth-of-type(4) {
+        transform: rotate(15deg);
+        margin-left: 10px;
+
+        transition: transform .12s ease-out;
+      }
+
+      @supports (display: grid) {
+        a:nth-of-type(4) {
+          margin-left: 40px;
+          margin-bottom: 13px;
+        }
+      }
+
+      a:nth-of-type(4):hover {
+        transform: rotate(0deg);
+      }
+
+      a:nth-of-type(5) {
+        transform: rotate(30deg);
+        margin-left: 10px;
+
+        transition: transform .12s ease-out;
+      }
+
+      @supports (display: grid) {
+        a:nth-of-type(5) {
+          margin-left: 20px;
+        }
+      }
+
+      a:nth-of-type(5):hover {
+        transform: rotate(0deg);
+      }
+
+    }
+
+    @media (max-height: 200px) {
+      img {
+        margin: 0 auto;
+        opacity: 0;
+      }
+    }
+
+    @media (max-height: 414px) and (min-width: 500px) {
+      img {
+        max-width: 50vh;
+      }
+    }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+
+      a:nth-of-type(1),
+      a:nth-of-type(2),
+      a:nth-of-type(3),
+      a:nth-of-type(4),
+      a:nth-of-type(5),
+      a:nth-of-type(6) {
+        transition: none;
+      }
+
+      img {
+        transition: none;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--color);
+        color: var(--bg-color);
+      }
+
+      h1 {
+        --bg-color: hsl(40, 18.7%, 73.7%);
+        color: var(--bg-color);
+      }
+
+      h2 {
+        --bg-color: hsl(40, 18.7%, 83.7%);
+        color: var(--bg-color);
+      }
+    }
+  </style>
 </head>
-<body>
-    <main>
-        <h1>Alejandro Narvaja</h1>
-        <h2>UI Developer</h2>
-        <figure>
-            <img src="images/alejandro-narvaja.jpg" alt="Foto de Alejandro Narvaja">
-            <figcaption>
-                <a href="https://codepen.io/alejuss">Codepen</a>
-                <a href="https://twitter.com/alebarbaja">Twitter</a>
-                <a href="https://github.com/alebarbaja">Github</a>
-                <a href="https://www.linkedin.com/in/alejandronarvaja">LinkedIn</a>
-                <a href="https://medium.com/@alebarbaja">Medium</a>
-            </figcaption>
-        </figure>
-    </main>
 
-    <script src="js/favicon-emoji.js"></script>
+<body>
+  <main>
+    <h1>Alejandro Narvaja</h1>
+    <h2>UI Developer</h2>
+    <figure>
+      <img src="images/alejandro-narvaja.jpg" alt="Foto de Alejandro Narvaja">
+      <figcaption>
+        <a href="https://codepen.io/alejuss" target="_blank" rel="noopener">Codepen</a>
+        <a href="https://twitter.com/alebarbaja" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://github.com/alebarbaja" target="_blank" rel="noopener">Github</a>
+        <a href="https://www.linkedin.com/in/alejandronarvaja" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@alebarbaja" target="_blank" rel="noopener">Medium</a>
+      </figcaption>
+    </figure>
+  </main>
+
+  <script>
+    const favicon = document.querySelector("link[rel=icon]");
+
+    if (favicon) {
+      const emoji = favicon.getAttribute("data-emoji");
+
+      if (emoji) {
+        const canvas = document.createElement("canvas");
+        canvas.height = 64;
+        canvas.width = 64;
+
+        const ctx = canvas.getContext("2d");
+        ctx.font = "64px serif";
+        ctx.fillText(emoji, 0, 64);
+
+        favicon.href = canvas.toDataURL();
+      }
+    }
+  </script>
 </body>
+
 </html>
