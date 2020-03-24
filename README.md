@@ -2,9 +2,7 @@
 
 ## [alejandronarvaja.com](https://alejandronarvaja.com)
 
-+ The layout is made with CSS Grid.
-
-+ Has dark mode for MacOS devices
+<img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS válido!" />
 
 + Use reduce motion for improve accesibility on devices that has reduce motion activated.
 
