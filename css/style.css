@@ -201,7 +201,7 @@ a:focus {
     }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
 
     body {
         background: #000000;
@@ -227,7 +227,7 @@ a:focus {
 
         color: #000000;
     }
-} */
+}
 
 @media screen and (prefers-reduced-motion: reduce) and (max-width: 700px) {
     
