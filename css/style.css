@@ -23,10 +23,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
 
-    background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(left, #FFFFFF, #ECE9E6);
-    background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#ECE9E6));
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #ECE9E6;
 }
 
 h1 {
@@ -203,10 +200,7 @@ a:focus {
 @media (prefers-color-scheme: dark) {
 
     body {
-        background: #000000;
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(29,29,31,1)), to(#000000));
-        background: -o-linear-gradient(top, rgba(29,29,31,1), #000000);
-        background: linear-gradient(to bottom, rgba(29,29,31,1), #000000);
+        background: rgb(29,29,31);
     }
 
     h1,
