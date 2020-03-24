@@ -25,8 +25,8 @@ body {
             justify-content: center;
 
     background: #ECE9E6;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#ECE9E6));
     background: -o-linear-gradient(left, #FFFFFF, #ECE9E6);
+    background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#ECE9E6));
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -37,6 +37,7 @@ h1 {
 
 h2 {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 img {
@@ -67,8 +68,8 @@ a {
     padding: 10px;
 
     background: #000000;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(29,29,31,1)), to(#000000));
     background: -o-linear-gradient(bottom, rgba(29,29,31,1), #000000);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(29,29,31,1)), to(#000000));
     background: linear-gradient(to top, rgba(29,29,31,1), #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     color: white;
@@ -231,11 +232,15 @@ a:focus {
 @media screen and (prefers-reduced-motion: reduce) and (max-width: 700px) {
     
     a {
+        -webkit-transition: none;
+        -o-transition: none;
         transition: none;
     }
 
     a:hover,
     a:focus {
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
     }
 }
