@@ -36,12 +36,17 @@ h2 {
     margin-bottom: 0;
 }
 
+h1,
+h2 {
+    color: #15202B;
+}
+
 img {
     display: block;
     margin: 2.5em auto;
 
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid #15202B;
 }
 
 figure {
@@ -63,10 +68,10 @@ a {
     margin: 5px 2px 0;
     padding: 10px;
 
-    background: #000000;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -o-linear-gradient(bottom, rgba(29,29,31,1), #000000);
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(29,29,31,1)), to(#000000));
-    background: linear-gradient(to top, rgba(29,29,31,1), #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #15202B;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -o-linear-gradient(bottom, rgba(29,29,31,1), #15202B);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(29,29,31,1)), to(#15202B));
+    background: linear-gradient(to top, rgba(29,29,31,1), #15202B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     color: white;
     border-radius: 4px;
@@ -200,7 +205,7 @@ a:focus {
 @media (prefers-color-scheme: dark) {
 
     body {
-        background: rgb(29,29,31);
+        background: #15202B;
     }
 
     h1,
@@ -218,7 +223,7 @@ a:focus {
         background: -o-linear-gradient(left, #FFFFFF, #ECE9E6);
         background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 
-        color: #000000;
+        color: #15202B;
     }
 }
 
