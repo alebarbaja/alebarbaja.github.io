@@ -65,7 +65,7 @@ figcaption {
 }
 
 a {
-    margin: 5px 2px 0;
+    margin: 10px 5px 0;
     padding: 10px;
 
     background: #15202B;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
@@ -97,10 +97,11 @@ a:last-child {
 
 a:hover,
 a:focus {
-    text-decoration: underline;
     -webkit-transform: rotate(-5deg);
         -ms-transform: rotate(-5deg);
             transform: rotate(-5deg);
+            outline: 2px dashed black;
+            outline-offset: 2px;
 }
 
 @media screen and (max-height: 414px) {
