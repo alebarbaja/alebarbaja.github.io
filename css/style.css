@@ -65,6 +65,9 @@ figcaption {
 }
 
 a {
+    position: relative;
+    overflow: hidden;
+
     margin: 10px 5px 0;
     padding: 10px;
 
@@ -86,6 +89,23 @@ a {
     transition: transform .2s ease-out, -webkit-transform .2s ease-out;
 }
 
+a span {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+a svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    max-height: 75%;
+    fill: currentColor;
+}
+
 a:first-child {
     margin-left: 0;
 }
@@ -102,6 +122,18 @@ a:focus {
             transform: rotate(-5deg);
             outline: 2px dashed black;
             outline-offset: 2px;
+}
+
+a:hover svg,
+a:focus svg {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+a:hover span,
+a:focus span {
+    opacity: 0;
+    transform: scale(0);
 }
 
 @media screen and (max-height: 414px) {
@@ -226,6 +258,20 @@ a:focus {
 
         color: #15202B;
     }
+
+    a:hover,
+    a:focus {
+        outline: 2px dashed #ECE9E6;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+
+    a span,
+    a svg {
+        transition: none;
+    }
+    
 }
 
 @media screen and (prefers-reduced-motion: reduce) and (max-width: 700px) {
@@ -242,4 +288,5 @@ a:focus {
             -ms-transform: none;
                 transform: none;
     }
+
 }
