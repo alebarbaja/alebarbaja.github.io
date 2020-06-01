@@ -91,8 +91,14 @@ a {
 
 a span {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform .3s .1s;
+    transition: opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform .3s .1s;
+    -o-transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform .3s .1s;
 }
 
 a svg {
@@ -100,8 +106,14 @@ a svg {
     top: 50%;
     left: 50%;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+        -ms-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    -webkit-transition: opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform .3s .1s;
+    transition: opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform .3s .1s;
+    -o-transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform .3s .1s, opacity .3s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform .3s .1s;
     max-height: 75%;
     fill: currentColor;
 }
@@ -127,13 +139,17 @@ a:focus {
 a:hover svg,
 a:focus svg {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
 }
 
 a:hover span,
 a:focus span {
     opacity: 0;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
 }
 
 @media screen and (max-height: 414px) {
@@ -252,8 +268,8 @@ a:focus span {
 
     a {
         background: #ECE9E6;
-        background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#ECE9E6));
         background: -o-linear-gradient(left, #FFFFFF, #ECE9E6);
+        background: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#ECE9E6));
         background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 
         color: #15202B;
@@ -269,6 +285,8 @@ a:focus span {
 
     a span,
     a svg {
+        -webkit-transition: none;
+        -o-transition: none;
         transition: none;
     }
     
