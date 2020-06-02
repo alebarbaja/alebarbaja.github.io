@@ -323,6 +323,7 @@ a:focus span {
     }
 
     img {
+        -webkit-animation: none;
         animation: none;
     }
     
