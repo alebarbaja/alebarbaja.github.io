@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *, *::after, *::before {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -76,9 +83,23 @@ img {
     border-radius: 50%;
     border: 3px solid #15202B;
 
+    -webkit-filter: grayscale(1);
+
+            filter: grayscale(1);
+    -webkit-transition: -webkit-filter .2s;
+    transition: -webkit-filter .2s;
+    -o-transition: filter .2s;
+    transition: filter .2s;
+    transition: filter .2s, -webkit-filter .2s;
+
     -webkit-animation: fadeIn .5s cubic-bezier(0.39, 0.575, 0.565, 1);
 
             animation: fadeIn .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+img:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
 }
 
 figure {
