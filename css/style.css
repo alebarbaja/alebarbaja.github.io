@@ -83,9 +83,9 @@ img {
     border-radius: 50%;
     border: 3px solid #15202B;
 
-    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(0);
 
-            filter: grayscale(1);
+            filter: grayscale(0);
     -webkit-transition: -webkit-filter .2s;
     transition: -webkit-filter .2s;
     -o-transition: filter .2s;
@@ -98,8 +98,8 @@ img {
 }
 
 img:hover {
-    -webkit-filter: grayscale(0);
-            filter: grayscale(0);
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
 }
 
 figure {
